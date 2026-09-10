@@ -4,6 +4,10 @@ from docingest.services import ingest_document, get_document
 
 app = FastAPI(title="DocIngest API")
 
+@app.get('/health')
+def health_check():
+    return {"status": "healthy"}
+
 @app.post('/documents', response_model=IngestResponse)
 def create_document(document: Document):
     try:
