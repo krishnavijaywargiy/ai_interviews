@@ -79,3 +79,4 @@ Fix Tasks 1-5 before attempting Task 6.
 
 ```bash
 python score.py
+```
